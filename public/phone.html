@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stiry Demo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #1a1a2e;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .phone-frame {
+      position: relative;
+      width: 402px;
+      height: 856px;
+      border-radius: 44px;
+      border: 6px solid #333;
+      overflow: hidden;
+      background: #000;
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.5),
+        0 0 0 2px rgba(255,255,255,0.08),
+        inset 0 0 0 1px rgba(255,255,255,0.05);
+    }
+    /* Notch */
+    .phone-frame::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 126px;
+      height: 28px;
+      background: #333;
+      border-bottom-left-radius: 14px;
+      border-bottom-right-radius: 14px;
+      z-index: 10;
+    }
+    /* Home indicator */
+    .phone-frame::after {
+      content: '';
+      position: absolute;
+      bottom: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 134px;
+      height: 5px;
+      background: #555;
+      border-radius: 3px;
+      z-index: 10;
+    }
+    .phone-frame iframe {
+      width: 390px;
+      height: 844px;
+      border: none;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="phone-frame">
+    <iframe src="/" title="Stiry App"></iframe>
+  </div>
+</body>
+</html>
