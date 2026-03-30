@@ -1,53 +1,6 @@
 
-    name: string
-    nickName: string
-    pwd: string
-    sex: string
-    redBookId: number
-    avatar: string
-    location: string
-    desc: string
-}
 
 
-    userName: string;
-    avatarUrl: string;
-    message: string;
-    dateTime: string;
-    location: string;
-    favoriteCount: number;
-    isFavorite: boolean;
-    children?: ArticleComment[];
-}
-
-
-    id: number;
-    title: string;
-    desc: string;
-    tag: string[];
-    dateTime: string;
-    location: string;
-    userId: number;
-    userName: string;
-    isFollow: boolean;
-    avatarUrl: string;
-    images: string[];
-    favoriteCount: number;
-    collectionCount: number;
-    isFavorite: boolean;
-    isCollection: boolean;
-    comments?: ArticleComment[];
-    commentCount?: number;
-}
-
-
-    id: number;
-    title: string;
-    image: string;
-    price: number;
-    originPrice: number | undefined;
-    promotion: string | undefined;
-}
 
 
 const MOCK_USERS = [
@@ -2101,11 +2054,6 @@ const MOCK_GOODS = [
 
 
 
-    id: number;
-    name: string;
-    image: string;
-}
-
 const MOCK_TOP10CATEGORY = [
     { id: 1, name: '潮流买手店', image: '/goods/top10/top1.jpg' },
     { id: 2, name: '新趋势', image: '/goods/top10/top2.jpg' },
@@ -2118,13 +2066,6 @@ const MOCK_TOP10CATEGORY = [
     { id: 9, name: '踏青必备', image: '/goods/top10/top9.jpg' },
     { id: 10, name: '青春出行', image: '/goods/top10/to10.jpg' },
 ];
-
-    id: number;
-    name: string;
-    avatarUrl: string;
-    lastMessage?: string;
-    lastMessageTime?: string;
-}
 
 const MOCK_MESSAGE = [
     {
@@ -2226,5 +2167,7 @@ const MOCK_MESSAGE = [
         lastMessageTime: '02-28',
     },
 ];
+
+
 
 module.exports = { MOCK_USERS, MOCK_ARTICLES, MOCK_GOODS, MOCK_TOP10CATEGORY, MOCK_MESSAGE };
